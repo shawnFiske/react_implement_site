@@ -3,14 +3,10 @@ var React = require('react');
 var Post = React.createClass({
   render: function() {
     return (
-      <div>
-        <h5># Header</h5>
-        <ul>
-          <li># points by author 1 hour ago</li>
-          <li>|</li>
-          <li># comments</li>
-        </ul>
-      </div>
+      <li>
+        <p>{this.props.post.count}. {this.props.post.title}</p>
+        <p>{this.props.post.points}points by{this.props.post.author} {this.props.post.time} hour ago | {this.props.post.comments} comments</p>
+      </li>
     )
   }
 })

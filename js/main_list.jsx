@@ -3,14 +3,17 @@ var Post  = require('./post.jsx');
 
 var List = React.createClass({
   render: function() {
+    {
+      var ourList = this.props.posts.map(function(dataObj){
+        return <Post post={dataObj} />
+      })
+    }
     return (
-      <div> 
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-      </div>
+      <section>
+        <ul>
+          { ourList }
+        </ul>
+      </section>
     )
   }
 })
